@@ -1,0 +1,90 @@
+\documentclass[a4paper, 12pt, ngerman]{article}
+
+\input{common/packages}
+\input{common/metadata}
+\input{common/template}
+
+
+\begin{document}
+
+\fontfamily{phv}\selectfont
+
+\begin{verbatim}
+                                     .
+                                      `:.
+                                        `:.
+                                .:'     ,::
+                               .:'      ;:'
+                               ::      ;:'
+                                :    .:'
+                                 `.  :.
+                        _________________________
+                       : _ _ _ _ _ _ _ _ _ _ _ _ :
+                   ,---:".".".".".".".".".".".".":
+                  : ,'"`::.:.:.:.:.:.:.:.:.:.:.::'
+                  `.`.  `:-===-===-===-===-===-:'
+                    `.`-._:                   :
+                      `-.__`.               ,' met.
+                  ,--------`"`-------------'--------.
+                   `"--.__                   __.--"'
+                          `""-------------""'
+\end{verbatim}
+
+\vspace*{5 mm}
+
+\begin{center}
+  \LARGE \textbf{Preis pro Tasse (alle Sorten): \EUR{0,25}}
+\end{center}
+
+\large
+
+\begin{itemize}
+  \item[--] Bitte halten Sie die Küche sauber!
+
+
+  \item[--] Tragen Sie für jede Tasse Kaffee ein Kreuz in die Liste ein,
+  von oben nach unten und von links nach rechts (siehe Bild):
+  \begin{center}
+    \begin{tikzpicture}[scale = 2.5]
+      \foreach \i in {0, 1, ..., 4} {\draw (4.2, -0.6 + \i*0.3) -- +(1.8, 0);}
+      \foreach \i in {0, 1, ..., 6} {\draw (4.2 + \i*0.3, -0.6) -- +(0, 1.2);}
+
+      \draw[ultra thick, tum dia red] (4.2 + 0.15, 0.45) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+      \draw[ultra thick, tum dia red] (4.2 + 0.15, 0.15) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+      \draw[ultra thick, tum dia red] (4.2 + 0.15, -0.15) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+      \draw[ultra thick, tum dia red] (4.2 + 0.15, -0.45) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+      \draw[ultra thick, tum dia red] (4.2 + 0.45, 0.45) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+      \draw[ultra thick, tum dia red] (4.2 + 0.45, 0.15) %
+        +(0.1, 0.1) -- +(-0.1, -0.1) %
+        +(-0.1, 0.1) -- +(0.1, -0.1);
+
+      \draw[ultra thick, tum orange, -latex] (4.2 + 0.45, -0.1) -- +(0, -0.4);
+      \draw[ultra thick, tum orange, -latex] (4.2 + 0.75, 0.5) -- +(0, -1);
+      \draw[ultra thick, tum orange, -latex] (4.2 + 1.05, 0.5) -- +(0, -1);
+
+      \foreach \i in {0, 8, ..., 24} {
+        \draw[black!50] (4.2 + \i*0.075, 0.6) -- +(0, 0.2) %
+        node[outer sep = 2 pt, scale = 0.8, above] {\i};
+      }
+    \end{tikzpicture}
+  \end{center}
+
+
+  \item[--] Bei Fragen wenden Sie sich an \kaiserName (\url{\kaiserEmail}).
+\end{itemize}
+
+\vfill
+
+\footnotesize Bildquelle: \url{http://ascii.co.uk/art/cup}.
+
+\end{document}

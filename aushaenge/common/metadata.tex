@@ -1,0 +1,34 @@
+\def\kaiserName{Mikhail Pak}
+\def\kaiserEmail{mikhail.pak@tum.de}
+\def\headerLeft{%
+  \resizebox{!}{1 cm}{%
+    \begin{tikzpicture}
+      \node[inner sep = 0 pt, outer sep = 0 pt, text width = 10 cm, align = left] %
+        at (0, 0) {%
+          \fontfamily{phv}\selectfont\color{tum blue}%
+          Lehrstuhl für Regelungstechnik\\
+          Fakultät für Maschinenwesen\\
+          Technische Universität München
+        };
+    \end{tikzpicture}
+  }
+}
+\def\headerRight{%
+  \resizebox{!}{1 cm}{%
+    \begin{tikzpicture}
+      \path[fill=tum blue]
+        (0.1649, 0.8021) -- (0.0000, 0.8021) --
+        (0.0000, 1.0000) -- (0.7347, 1.0000) --
+        (0.7347, 0.2028) -- (0.9109, 0.2028) --
+        (0.9109, 1.0000) -- (1.8716, 1.0000) --
+        (1.8716, 0.0000) -- (1.6653, 0.0000) --
+        (1.6653, 0.7930) -- (1.4884, 0.7930) --
+        (1.4884, 0.0000) -- (1.2842, 0.0000) --
+        (1.2842, 0.7930) -- (1.1098, 0.7930) --
+        (1.1098, 0.0000) -- (0.5326, 0.0000) --
+        (0.5326, 0.8021) -- (0.3642, 0.8021) --
+        (0.3642, 0.0000) -- (0.1663, 0.0000) --
+        cycle;
+    \end{tikzpicture}
+  }
+}
