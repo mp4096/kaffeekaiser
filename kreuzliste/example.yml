@@ -1,0 +1,117 @@
+creator_id: doe
+# Offset (in cm)
+offset: -3.0
+# Increment (in cm)
+increment: -1.9
+language: ngerman
+filename_template: "${datestamp}_Kreuzliste.tex"
+num_pdflatex_runs: 2
+
+
+groups:
+    "Group 1: Employees":
+        - last_name: Harrison
+          first_name: Martha
+        - last_name: Perez
+          first_name: Carl
+        - last_name: Fuller
+          first_name: Samantha
+        - last_name: Sullivan
+          first_name: Peter
+        - last_name: Kelly
+          first_name: Lawrence
+        - last_name: Phillips
+          first_name: Ashley
+        - last_name: Stone
+          first_name: Brittany
+
+    "Group 2: Students":
+        - last_name: Fowler
+          first_name: Keith
+          supervisor: Fuller
+        - last_name: Chapman
+          first_name: Bobby
+          supervisor: Perez
+        - last_name: Kelley
+          first_name: Judy
+          supervisor: Stone
+        - last_name: \hrulefill
+          first_name: \hrulefill
+          supervisor: \hrulefill
+        - last_name: \hrulefill
+          first_name: \hrulefill
+          supervisor: \hrulefill
+        - last_name: \hrulefill
+          first_name: \hrulefill
+          supervisor: \hrulefill
+        - last_name: \hrulefill
+          first_name: \hrulefill
+          supervisor: \hrulefill
+        - last_name: \hrulefill
+          first_name: \hrulefill
+          supervisor: \hrulefill
+
+
+quotes:
+  - \glqq Manchmal ist eine Schreibblockade für die Leser ein Segen, das wollen wir nicht vergessen\grqq\ --- Marcel Reich--Ranicki
+  - \glqq Wenn ich ein zweites Mal geboren werde, laß ich mich gleich unter einem falschen Namen eintragen\grqq\ --- Stanisław Jerzy Lec
+  - "`My hovercraft is full of eels'"
+  - "`I will not buy this record; it is scratched'"
+  - "`This parrot is no more! It has ceased to be! It's expired and gone to meet its maker!'"
+
+
+# You probably don't want to change these without a good reason
+single_sheet_template: |
+    \begin{tikzpicture}[
+      remember picture,
+      overlay,
+      inner sep = 0 pt,
+      shift = (current page.north west),
+      ]
+
+      \scriptsize
+
+      \node at (10.5, -1) {\small{$title}};
+
+      \foreach \yPos/\name/\supervisor in {$contents} {
+        \begin{scope}[yshift = \yPos]
+          \node[right, text width = 2.0 cm] at (1.7,  0.4) {\name};
+          \node[right, text width = 2.0 cm] at (1.7,  0.0) {\supervisor};
+
+          \foreach \i in {0, 1, ..., 4} {
+              \draw (4.2, -0.6 + \i*0.3) -- +(15, 0);
+          }
+          \foreach \i in {0, 1, ..., 50} {
+              \draw (4.2 + \i*0.3, -0.6) -- +(0, 1.2);
+          }
+
+          \foreach \i in {0, 8, ..., 200} {
+            \draw[black!50] (4.2 + \i*0.075, 0.6) -- +(0, 0.2) %
+              node[outer sep = 2 pt, scale = 0.8, above] {\i};
+          }
+        \end{scope}
+      }
+
+      \node at (10.5, -27.5) {\textrm{\textit{$quote}}};
+      \node at (10.5, -28.5) {$datestamp/$creator_id};
+    \end{tikzpicture}
+
+
+main_file_template: |
+    \documentclass[a4paper, 11 pt, $language]{article}
+
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \usepackage{babel}
+    \usepackage[dvipsnames]{xcolor}
+    \usepackage{helvet}
+    \usepackage{tikz}
+    \usepackage{CormorantGaramond}
+
+    \begin{document}
+      \fontfamily{phv}\selectfont
+      \pagestyle{empty}
+
+      $includes
+
+    \end{document}
