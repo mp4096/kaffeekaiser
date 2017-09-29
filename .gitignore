@@ -1,3 +1,9 @@
+## Production config
+kreuzliste/config.yml
+
+## Tally sheets
+*_Kreuzliste.tex
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
