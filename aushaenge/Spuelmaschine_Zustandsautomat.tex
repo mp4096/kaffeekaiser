@@ -1,0 +1,52 @@
+\documentclass[a4paper, 12pt, ngerman]{article}
+
+\input{common/packages}
+\input{common/metadata}
+\input{common/template}
+
+
+\begin{document}
+\fontfamily{phv}\selectfont
+
+\vspace*{10 mm}
+
+\begin{center}
+  \LARGE \textbf{Spülmaschinenzustand}
+\end{center}
+
+\vspace*{15 mm}
+
+\large
+
+\centering
+\begin{tikzpicture}
+  \node[
+    tum dia red,
+    minimum width = 8 cm,
+    minimum height = 2 cm,
+    rounded corners = 5 mm,
+    draw,
+    very thick,
+    ] (laeuft) at (6, 0) {\textbf{Läuft} -- nicht öffnen!};
+  \node[
+    tum blue,
+    minimum width = 8 cm,
+    minimum height = 2 cm,
+    rounded corners = 5 mm,
+    draw,
+    very thick,
+    ] (sauber) at (0, -5) {\textbf{Sauberes Geschirr} -- ausräumen!};
+  \node[
+    minimum width = 8 cm,
+    minimum height = 2 cm,
+    rounded corners = 5 mm,
+    draw,
+    very thick,
+    ] (dreckig) at (0, 5) {\textbf{Dreckiges Geschirr} -- einräumen!};
+  \draw[-latex', ultra thick] (sauber) -- (dreckig);
+  \draw[-latex', ultra thick] (dreckig) -- (laeuft);
+  \draw[-latex', ultra thick] (laeuft) -- (sauber);
+\end{tikzpicture}
+
+
+\end{document}
