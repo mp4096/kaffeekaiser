@@ -4,6 +4,9 @@ kreuzliste/config.yml
 ## Tally sheets
 *_Kreuzliste.tex
 
+## Header logo
+exheader.png
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
