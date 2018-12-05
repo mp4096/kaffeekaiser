@@ -58,6 +58,24 @@ quotes:
   - "`My hovercraft is full of eels'"
   - "`I will not buy this record; it is scratched'"
   - "`This parrot is no more! It has ceased to be! It's expired and gone to meet its maker!'"
+  - \glqq Das überhandnehmende Maschinenwesen quält und ängstigt mich, es wälzt sich heran wie ein Gewitter, langsam, langsam; \linebreak aber es hat seine Richtung genommen, es wird kommen und treffen.\grqq\ --- Goethe
+  - \glqq Wir sind, was wir wiederholt tun. Exzellenz ist also keine Handlung, sondern eine Gewohnheit.\grqq\ --- Aristoteles
+  - \glqq Das Geheimnis der Freude an der Arbeit ist in einem Wort enthalten -- Exzellenz. \linebreak Zu wissen, wie man etwas gut macht, bedeutet, es zu genießen.\grqq\ --- Pearl S. Buck
+  - \glqq Wenn die Erfüllung der Erwartungen der anderen dein oberstes Ziel ist, \linebreak hast du deine Einzigartigkeit und damit deine Exzellenz geopfert.\grqq\ --- Hope Solo
+  - "``We don't get a chance to do that many things, and everyone should be really excellent. Because this is our life.'' --- Steve Jobs"
+  - \glqq Ober sticht Unter\grqq\ --- Prof. Dr. mont. habil. Dr. h. c. Ewald Werner
+  - \glqq Niemand hat die Absicht eine Mauer zu bauen!\grqq\ --- Bob der Baumeister
+  - \glqq Ich denke, also bin ich\grqq\ --- Til Schweiger
+  - \glqq Der Vorteil der Klugheit besteht darin, dass man sich dumm stellen kann. Das Gegenteil ist schon schwieriger\grqq\ --- Bastian Schweinsteiger
+  - \glqq Alles, was wir sind, ist das Resultat von dem, was wir gedacht haben\grqq\ --- Lukas Podolski
+  - \glqq Wenn man ein 0--2 kassiert, dann ist ein 1--1 nicht mehr möglich\grqq\ --- Satz des Pythagoras
+  - \glqq Ein Experte ist ein Mann, der hinterher genau sagen kann, warum seine Prognose nicht gestimmt hat.\grqq\ --- Peter Hartz
+  - \glqq Handle nur nach derjenigen Maxime, durch die du zugleich wollen kannst, dass sie ein allgemeines Gesetz werde.\grqq\ --- Silvio Berlusconi
+  - \glqq Die Macht ist etwas, was sich von unzähligen Punkten aus und im Spiel ungleicher und beweglicher Beziehungen vollzieht.\grqq\ --- Darth Vader
+  - \glqq Unsere Professoren sind viel zu selbstbewusst und professionell, \linebreak um sich von irgendwem einspannen zu lassen.\grqq\ --- Prof. Dr. Dr. h.c. mult. Wolfgang A. Herrmann
+  - \glqq Die Zeit der akademischen Erbhöfe ist vorbei\grqq\ --- Prof. Dr. Dr. h.c. mult. Wolfgang A. Herrmann
+  - \glqq Dein Glück, Gott, dass du so hoch wohnst, sonst würde man dir die Fenster einschlagen.\grqq\ --- Jiddisches Sprichwort
+  - \glqq Selbst die teuerste Uhr hat nicht mehr als sechzig Minuten.\grqq\ --- Jiddisches Sprichwort
 
 
 # You probably don't want to change these without a good reason
@@ -92,7 +110,7 @@ single_sheet_template: |
         \end{scope}
       }
 
-      \node at (10.5, -27.5) {\textrm{\textit{$quote}}};
+      \node[text width = 17 cm, align = center] at (10.5, -27.5) {\textrm{\textit{$quote}}};
       \node at (10.5, -28.5) {$datestamp/$creator_id};
     \end{tikzpicture}
 
