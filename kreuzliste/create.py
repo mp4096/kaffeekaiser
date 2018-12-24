@@ -1,4 +1,3 @@
-import codecs
 from datetime import date
 import os
 import random
@@ -48,7 +47,7 @@ def create_tikz_contents(y_pos, user_spec):
 
 
 def create_tally_sheets(filename):
-    with codecs.open(filename, "r", encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         data = yaml.load(f)
 
     single_sheets = (
@@ -60,7 +59,7 @@ def create_tally_sheets(filename):
         datestamp=date.today().isoformat(),
         )
 
-    with codecs.open(tex_filename, "w", encoding="utf-8") as f:
+    with open(tex_filename, "w", encoding="utf-8") as f:
         f.write(make_main_file(single_sheets, data))
 
     for i in range(data["num_pdflatex_runs"]):
